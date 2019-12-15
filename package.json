@@ -1,5 +1,5 @@
 {
-  "name": "prismagram",
+  "name": "disorder-backend",
   "version": "1.0.0",
   "description": "disorder",
   "repository": "https://github.com/abhidhamma/disorder",
@@ -7,6 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "node": "12.13.0",
+    "npm": "6.x",
+    "yarn": "1.x",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
