@@ -1,4 +1,4 @@
-import { prisma } from "../../../../generated/prisma-client";
+import { prisma } from '../../../../generated/prisma-client';
 
 export default {
   Mutation: {
@@ -8,8 +8,8 @@ export default {
       const { user } = request;
       return prisma.updateUser({
         where: { id: user.id },
-        data: { userName, email, firstName, lastName, bio, avatar }
+        data: { userName, email, firstName, lastName, bio, avatar },
       });
-    }
-  }
+    },
+  },
 };

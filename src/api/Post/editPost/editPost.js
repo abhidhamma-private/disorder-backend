@@ -1,7 +1,7 @@
-import { prisma } from "../../../../generated/prisma-client";
+import { prisma } from '../../../../generated/prisma-client';
 
-const DELETE = "DELETE";
-const EDIT = "EDIT";
+const DELETE = 'DELETE';
+const EDIT = 'EDIT';
 
 export default {
   Mutation: {
@@ -14,7 +14,7 @@ export default {
         if (action === EDIT) {
           return prisma.updatePost({
             data: { caption, location },
-            where: { id }
+            where: { id },
           });
         } else if (action === DELETE) {
           return prisma.deletePost({ id });
@@ -22,6 +22,6 @@ export default {
       } else {
         throw Error("You can't do that");
       }
-    }
-  }
+    },
+  },
 };

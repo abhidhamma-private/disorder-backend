@@ -1,4 +1,4 @@
-import { prisma } from "../../../../generated/prisma-client";
+import { prisma } from '../../../../generated/prisma-client';
 
 export default {
   Query: {
@@ -6,10 +6,10 @@ export default {
       prisma.posts({
         where: {
           OR: [
-            { location_starts_with: args.term },
-            { caption_starts_with: args.term }
-          ]
-        }
-      })
-  }
+            { title_starts_with: args.term },
+            { caption_starts_with: args.term },
+          ],
+        },
+      }),
+  },
 };

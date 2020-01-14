@@ -2,13 +2,10 @@ type User {
   id: ID!
   avatar: String
   userName: String!
-  email: String!
-  firstName: String
-  lastName: String
-  fullName: String
+  questions: [Question!]!
+  diaries: [Diary!]!
   isFollowing: Boolean!
   isSelf: Boolean!
-  bio: String
   following: [User!]!
   followingCount: Int!
   followers: [User!]!
@@ -19,6 +16,36 @@ type User {
   comments: [Comment!]!
   rooms: [Room!]!
   loginSecret: String!
+  createdAt: String
+  updatedAt: String
+}
+
+type Chat {
+  id: String!
+  userid: String!
+  writer: String!
+  description: String!
+  avatar: String!
+}
+
+type Question {
+  id: ID!
+  behavior: Boolean!
+  type: String!
+  description: String!
+  users: [User!]!
+  question: String!
+  createdAt: String
+  updatedAt: String
+}
+
+type Diary {
+  id: ID!
+  content: String!
+  user: User!
+  good: Boolean!
+  score: Int
+  question: Question!
   createdAt: String
   updatedAt: String
 }

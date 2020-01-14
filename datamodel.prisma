@@ -2,17 +2,41 @@ type User {
   id: ID! @id
   avatar: String
     @default(
-      value: "../../assets/image/avatar.png"
+      value: "avatar.png"
     )
   userName: String!
+  questions:[Question!]! @relation(name:"QuestionsOfUsers", onDelete: CASCADE)
+  diaries:[Diary!]! @relation(name: "DiariesOfUser", onDelete: CASCADE) 
   email: String @unique
-  following: [User!]! @relation(name: "FollowRelation")
+  following: [User!]!@relation(name: "FollowRelation")
   followers: [User!]! @relation(name: "FollowRelation")
   posts: [Post!]! @relation(name: "PostsOfUser", onDelete: CASCADE)
   likes: [Like!]! @relation(name: "LikesOfUser", onDelete: CASCADE)
   comments: [Comment!]! @relation(name: "CommentsOfUser", onDelete: CASCADE)
   rooms: [Room!]!
   loginSecret: String
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Question {
+  id: ID! @id
+  behavior:Boolean!
+  type:String!
+  description: String!
+  question: String!
+  users: [User!]! @relation(link:TABLE, name:"QuestionsOfUsers", onDelete: CASCADE)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Diary {
+  id: ID! @id
+  content: String!
+  good:Boolean!
+  score:Int
+  user: User! @relation(name: "DiariesOfUser", onDelete: CASCADE)
+  question: Question! @relation(link:INLINE, name: "QuestionOfDiary", onDelete: CASCADE)
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
@@ -48,7 +72,7 @@ type Comment {
 
 type File {
   id: ID! @id
-  url: String!
+  url: String
   post: Post @relation(name: "FilesOfPost")
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt

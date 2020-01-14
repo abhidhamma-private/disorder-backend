@@ -17,7 +17,7 @@ const sendMail = email => {
     service: 'gmail',
     host: 'smtp.gmail.com',
     auth: {
-      user: process.env.GMAIL_userName,
+      user: process.env.GMAIL_USERNAME,
       pass: process.env.GMAIL_PASSWORD,
     },
   };

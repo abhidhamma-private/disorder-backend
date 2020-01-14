@@ -4,7 +4,7 @@ import { prisma } from "../../../../generated/prisma-client";
 export default {
   Mutation: {
     follow: async (_, args, { request }) => {
-      isAuthenticated(request);
+      if(isAuthenticated(request)) return false;
       const { id } = args;
       const { user } = request;
       try {

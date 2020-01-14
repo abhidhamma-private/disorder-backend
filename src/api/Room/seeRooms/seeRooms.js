@@ -1,4 +1,4 @@
-import { prisma } from "../../../../generated/prisma-client";
+import { prisma } from '../../../../generated/prisma-client';
 
 export default {
   Query: {
@@ -8,10 +8,10 @@ export default {
       return prisma.rooms({
         where: {
           participants_some: {
-            id: user.id
-          }
-        }
+            id: user.id,
+          },
+        },
       });
-    }
-  }
+    },
+  },
 };

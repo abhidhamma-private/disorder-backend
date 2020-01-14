@@ -1,0 +1,8 @@
+type Mutation {
+  createMyDiary(
+    content: String
+    good: Boolean
+    score: Int
+    questionId: String
+  ): Boolean
+}
