@@ -16,6 +16,8 @@
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.17.1",
+    "fxjs": "^0.15.0",
+    "fxjs2": "^0.15.0",
     "graphql-tools": "^4.0.4",
     "graphql-yoga": "^1.17.4",
     "jsonwebtoken": "^8.4.0",

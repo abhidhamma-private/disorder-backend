@@ -3250,6 +3250,22 @@ function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+fxjs2@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/fxjs2/-/fxjs2-0.15.0.tgz#bcfbd3b7c940ede41cd6b16945d883945936a5cc"
+  integrity sha512-5EiOyLrlqhEH8Sof4SxEr6am7eFMwoR+9W6XjaPZxsOcLRUQHsbNpe9njB5PrD1lLzYL8aejpmbwDvH8iX7uVw==
+  dependencies:
+    core-js "^3.2.1"
+    regenerator-runtime "^0.13.3"
+
+fxjs@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/fxjs/-/fxjs-0.15.0.tgz#cafa9898ab9dbfff324bd5bc38d75bc91535b43e"
+  integrity sha512-R4vKGZf+QsDZ3IwCIyODKuuqGoxNLUdGwNbxIGK/oIcUpKZDA0Fno/F1XfzjS8pszVfkEH2CfLQlfxrSFsT8Bg==
+  dependencies:
+    core-js "^3.2.1"
+    regenerator-runtime "^0.13.3"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"

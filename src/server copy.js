@@ -27,7 +27,7 @@ let chattingLog = new Array(
     avatar: '#3f51b5',
   }
 );
-const PORT = 4000;
+const PORT = process.env.PORT;
 const server = new GraphQLServer({
   schema,
   context: ({ request }) => ({
@@ -50,6 +50,7 @@ server.express.get('/uploads/**', function(req, res) {
   const file = `${__dirname}/..${path}`;
   res.download(file);
 });
+
 server.start(
   {
     port: PORT,

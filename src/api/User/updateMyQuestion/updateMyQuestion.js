@@ -3,7 +3,8 @@ import { prisma } from '../../../../generated/prisma-client';
 export default {
   Mutation: {
     updateMyQuestion: async (_, args, { request, isAuthenticated }) => {
-      if(isAuthenticated(request)) return false;
+      console.log('updateMyQuestion');
+      if (isAuthenticated(request)) return false;
       const { question } = args;
       const { user } = request;
 

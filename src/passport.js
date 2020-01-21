@@ -8,8 +8,11 @@ const jwtOptions = {
 };
 
 const verifyUser = async (payload, done) => {
+  console.log(payload.id);
   try {
-    const user = await prisma.user({ id: payload.id });
+    const user = await prisma
+      .user({ id: payload.id })
+      .catch(e => e.console.log('error : ', e));
     if (user !== null) {
       return done(null, user);
     } else {

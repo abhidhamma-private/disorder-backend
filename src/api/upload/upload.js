@@ -1,7 +1,9 @@
 import { prisma } from '../../../generated/prisma-client';
+const POST_ADDED = 'POST_ADDED';
+
 export default {
   Mutation: {
-    upload: async (_, args, { request, isAuthenticated }) => {
+    upload: async (_, args, { request, isAuthenticated, pubsub }) => {
       try {
         isAuthenticated(request);
         const { user } = request;
@@ -37,6 +39,8 @@ export default {
               })
           );
         }
+
+        // pubsub.publish(POST_ADDED, { postAdded: post });
 
         return post;
       } catch (e) {
