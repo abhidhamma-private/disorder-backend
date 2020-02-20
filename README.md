@@ -1,8 +1,3 @@
-# prismagram
-
-instagram clone with Express + Prisma React and React Native
-
-## User Stories
 
 ## 요구사항
 
@@ -24,8 +19,3 @@ instagram clone with Express + Prisma React and React Native
 - [x] LightHouse적용
 - [x] SRI 적용
 - [ ] PlayStore배포
-
-## 코드챌린지
-
-- [ ] 팔로우 언팔로우를 토글로 합치기
-- [ ] 유저네임과 이메일도 수정할 수 있게하기
