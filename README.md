@@ -18,4 +18,4 @@
 - [x] 메신저(subscribe)
 - [x] LightHouse적용
 - [x] SRI 적용
-- [ ] PlayStore배포
+- [x] PlayStore배포
